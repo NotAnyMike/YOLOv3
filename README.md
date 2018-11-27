@@ -45,7 +45,7 @@ ans example would be:
 ``python video.py --video test.mp4``.
 
 
-### Running on Simulation
+### Running on Simulation
 
 Comming soon...
 
