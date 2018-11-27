@@ -1,7 +1,61 @@
+# YOLO v3 implementation in YOLO
+
+This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) using Pytorch and pretrained weights using Pytorch and pretrained weights
+
+## TODO
+
+* remove this readme
+* add instructions to run it out of the box
+* add videos
+
+### Instructions 
+
+0. Clone this repo (``git clone this``).
+1. Install all the requirements to run it by running
+`` SOME CODE I DON'T HAVE YET``
+2. Install pytorch depending on your system, the code does not require CUDA nor CudNN to run.
+3. Download the weights from [here](https://pjreddie.com/media/files/yolov3.weights) or if in ubuntu run
+``wget https://pjreddie.com/media/files/yolov3.weights``
+and move them to the root directory of the repo.
+4. Run it (see section **RUNNING CODE**)
+
+## Running Code
+
+There are two different ways to run the code, on images (specifing the path) or in video, I am implementing code to run in realtime with video input from simularion (using AirSim) and to run it using web cam.
+
+### Running on images
+
+Run the code
+
+``python detect.py --images [image file] --det [output directory]
+
+An example would be:
+
+``python detect.py --images imgs/giraffe.jpg --det det``
+
+
+### Running on video
+
+The output of this script will be the video with each frame modified showing the dectected objects, without GPU the video will look pretty slow. To run it, run this code:
+
+``python video.py --video [video file]``
+
+ans example would be:
+
+``python video.py --video test.mp4``.
+
+
+### Running on Simulation
+
+Comming soon...
+
+### Running on web cam
+
+Comming soon...
+
+---
+
 # A PyTorch implementation of a YOLO v3 Object Detector
-
-[UPDATE] : This repo serves as a driver code for my research. I just graduated college, and am very busy looking for research internship / fellowship roles before eventually applying for a masters. I won't have the time to look into issues for the time being. Thank you.
-
 
 This repository contains code for a object detector based on [YOLOv3: An Incremental Improvement](https://pjreddie.com/media/files/papers/YOLOv3.pdf), implementedin PyTorch. The code is based on the official code of [YOLO v3](https://github.com/pjreddie/darknet), as well as a PyTorch 
 port of the original code, by [marvis](https://github.com/marvis/pytorch-yolo2). One of the goals of this code is to improve
