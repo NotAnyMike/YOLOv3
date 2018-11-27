@@ -43,20 +43,13 @@ python detect.py --images imgs/giraffe.jpg --det det
 
 ### Running on video
 
-The output of this script will be the video with each frame modified showing the dectected objects, without GPU the video will look pretty slow. To run it, run this code:
+The output of this script will be the video with each frame modified showing the dectected objects, without GPU the video will look pretty slow. You should also run the file, video_demo.py with --video flag specifying the video file. The video file should be in .avi or .mp4 format
 
-``python video.py --video [video file]``
+``python video_demo.py --video [video file]``
 
 ans example would be:
 
-``python video.py --video test.mp4``.
-
-You should also run the file, video_demo.py with --video flag specifying the video file. The video file should be in .avi format
-since openCV only accepts OpenCV as the input format. 
-
-```
-python video_demo.py --video video.avi
-```
+``python video_demo.py --video test.mp4``.
 
 Tweakable settings can be seen with -h flag. 
 
