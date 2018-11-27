@@ -1,6 +1,6 @@
 # YOLO v3 implementation in YOLO
 
-This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) using Pytorch and pretrained weights using Pytorch and pretrained weights
+This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) using Pytorch and pretrained weights using Pytorch and pretrained weights based on [this repo](https://github.com/ayooshkathuria/pytorch-yolo-v3)
 
 ## TODO
 
