@@ -11,13 +11,15 @@ This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YO
 ### Instructions 
 
 0. Clone this repo (``git clone this``).
+1. (optional) Create a conda environment
 1. Install all the requirements to run it by running
-`` SOME CODE I DON'T HAVE YET``
+``conda install numpy pandas matplolib opencv``
 2. Install pytorch depending on your system, the code does not require CUDA nor CudNN to run.
 3. Download the weights from [here](https://pjreddie.com/media/files/yolov3.weights) or if in ubuntu run
 ``wget https://pjreddie.com/media/files/yolov3.weights``
 and move them to the root directory of the repo.
 4. Run it (see section **RUNNING CODE**)
+3. If there is an error with cv2, install opencv with ``conda install opencv``
 
 ## Running Code
 
@@ -27,7 +29,9 @@ There are two different ways to run the code, on images (specifing the path) or 
 
 Run the code
 
-``python detect.py --images [image file] --det [output directory]
+```
+python detect.py --images [image file] --det [output directory]
+```
 
 An example running in multiple images
 
@@ -45,11 +49,15 @@ python detect.py --images imgs/giraffe.jpg --det det
 
 The output of this script will be the video with each frame modified showing the dectected objects, without GPU the video will look pretty slow. You should also run the file, video_demo.py with --video flag specifying the video file. The video file should be in .avi or .mp4 format
 
-``python video_demo.py --video [video file]``
+```
+python video_demo.py --video [video file]
+```
 
 ans example would be:
 
-``python video_demo.py --video test.mp4``.
+```
+python video_demo.py --video test.mp4
+```
 
 Tweakable settings can be seen with -h flag. 
 
@@ -95,9 +103,9 @@ python detect.py --images imgs --det det --reso 320
 ---
 
 ## Requirements
-1. Python 3.5
+1. Python 3.5++
 2. OpenCV
-3. PyTorch 0.4
+3. PyTorch 0.4++
 
 Using PyTorch 0.3 will break the detector.
 
