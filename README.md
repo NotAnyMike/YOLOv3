@@ -4,18 +4,15 @@ The following is a recording of YOLO running on real time on some "random" video
 
 ![Example](example.gif)
 
-This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) using Pytorch and pretrained weights using Pytorch and pretrained weights based on [this repo](https://github.com/ayooshkathuria/pytorch-yolo-v3)
+This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) using Pytorch and pretrained weights using Pytorch based on [this repo](https://github.com/ayooshkathuria/pytorch-yolo-v3)
 
-## TODO
+## Instructions 
 
-* remove this readme
-* add instructions to run it out of the box
-* add videos
-
-### Instructions 
-
-0. Clone this repo (``git clone this``).
-1. (optional) Create a conda environment
+0. Clone this repo (``git clone https://github.com/NotAnyMike/YOLOv3.git``).
+1. (optional) Create a conda environment with
+```
+conda create -n yolo
+```
 1. Install all the requirements to run it by running
 ``conda install numpy pandas matplolib opencv``
 2. Install pytorch depending on your system, the code does not require CUDA nor CudNN to run.
@@ -23,7 +20,7 @@ This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YO
 ``wget https://pjreddie.com/media/files/yolov3.weights``
 and move them to the root directory of the repo.
 4. Run it (see section **RUNNING CODE**)
-3. If there is an error with cv2, install opencv with ``conda install opencv``
+3. If there is an error with cv2, install opencv with ``pip install opencv``
 
 ## Running Code
 
