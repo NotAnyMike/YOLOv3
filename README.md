@@ -8,23 +8,23 @@ This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YO
 
 ## Instructions 
 
-0. Clone this repo (``git clone https://github.com/NotAnyMike/YOLOv3.git``).
-1. (optional) Create a conda environment with
+1. Clone this repo (``git clone https://github.com/NotAnyMike/YOLOv3.git``).
+2. (optional) Create a conda environment with
 ```
 conda create -n yolo
 ```
-1. Install all the requirements to run it by running
+3. Install all the requirements to run it by running
 ```
 conda install numpy pandas matplolib opencv
 ```
-2. Install pytorch depending on your system, the code does not require CUDA nor CudNN to run.
-3. Download the weights from [here](https://pjreddie.com/media/files/yolov3.weights) or if in ubuntu run
+4. Install pytorch depending on your system, the code does not require CUDA nor CudNN to run.
+5. Download the weights from [here](https://pjreddie.com/media/files/yolov3.weights) or if in ubuntu run
 ```
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
 and move them to the root directory of the repo.
-4. Run it (see section **RUNNING CODE**)
-3. If there is an error with cv2, install opencv with 
+6. Run it (see section **RUNNING CODE**)
+7. If there is an error with cv2, install opencv with 
 ```
 pip install opencv
 ```
