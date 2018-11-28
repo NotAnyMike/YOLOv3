@@ -1,5 +1,7 @@
 # YOLO v3 implementation in YOLO
 
+The following is a recording of YOLO running on real time on some "random" video.
+
 ![Example](example.gif)
 
 This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) using Pytorch and pretrained weights using Pytorch and pretrained weights based on [this repo](https://github.com/ayooshkathuria/pytorch-yolo-v3)
