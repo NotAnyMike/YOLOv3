@@ -14,13 +14,20 @@ This is an implementation of [YOLOv3](https://pjreddie.com/media/files/papers/YO
 conda create -n yolo
 ```
 1. Install all the requirements to run it by running
-``conda install numpy pandas matplolib opencv``
+```
+conda install numpy pandas matplolib opencv
+```
 2. Install pytorch depending on your system, the code does not require CUDA nor CudNN to run.
 3. Download the weights from [here](https://pjreddie.com/media/files/yolov3.weights) or if in ubuntu run
-``wget https://pjreddie.com/media/files/yolov3.weights``
+```
+wget https://pjreddie.com/media/files/yolov3.weights
+```
 and move them to the root directory of the repo.
 4. Run it (see section **RUNNING CODE**)
-3. If there is an error with cv2, install opencv with ``pip install opencv``
+3. If there is an error with cv2, install opencv with 
+```
+pip install opencv
+```
 
 ## Running Code
 
