@@ -74,6 +74,10 @@ Tweakable settings can be seen with -h flag.
 
 Comming soon...
 
+The idea is to run yolo in real time from the input of AirSim, one video showing a city environment in AirSim
+
+![City env](./airsim.gif)
+
 ### On a Camera
 Same as video module, but you don't have to specify the video file since feed will be taken from your camera. To be precise, 
 feed will be taken from what the OpenCV, recognises as camera 0. The default image resolution is 160 here, though you can change it with `reso` flag.
@@ -91,8 +95,6 @@ YOLO v3 makes detections across different scales, each of which deputise in dete
 ```
 python detect.py --scales 1,3
 ```
-
-Comming soon...
 
 ### For help 
 
