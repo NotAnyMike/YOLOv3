@@ -79,11 +79,9 @@ class MaxPoolStride1(nn.Module):
         pooled_x = nn.MaxPool2d(self.kernel_size, self.pad)(padded_x)
         return pooled_x
     
-
 class EmptyLayer(nn.Module):
     def __init__(self):
         super(EmptyLayer, self).__init__()
-        
 
 class DetectionLayer(nn.Module):
     def __init__(self, anchors):
@@ -97,10 +95,6 @@ class DetectionLayer(nn.Module):
         prediction = predict_transform(prediction, inp_dim, self.anchors, num_classes, confidence, CUDA)
         return prediction
         
-
-        
-
-
 class Upsample(nn.Module):
     def __init__(self, stride=2):
         super(Upsample, self).__init__()
@@ -117,7 +111,6 @@ class Upsample(nn.Module):
         hs = stride
         x = x.view(B, C, H, 1, W, 1).expand(B, C, H, stride, W, stride).contiguous().view(B, C, H*stride, W*stride)
         return x
-#       
         
 class ReOrgLayer(nn.Module):
     def __init__(self, stride = 2):
@@ -137,7 +130,6 @@ class ReOrgLayer(nn.Module):
         x = x.view(B, C, ws*hs, H // ws, W // ws).transpose(1,2).contiguous()
         x = x.view(B, C*ws*hs, H // ws, W // ws)
         return x
-
 
 def create_modules(blocks):
     net_info = blocks[0]     #Captures the information about the input and pre-processing    
@@ -176,8 +168,7 @@ def create_modules(blocks):
             if padding:
                 pad = (kernel_size - 1) // 2
             else:
-                pad = 0
-                
+                pad = 0 
             #Add the convolutional layer
             conv = nn.Conv2d(prev_filters, filters, kernel_size, stride, pad, bias = bias)
             module.add_module("conv_{0}".format(index), conv)
@@ -329,7 +320,6 @@ class Darknet(nn.Module):
 
                 if len(layers) == 1:
                     x = outputs[i + (layers[0])]
-
                 else:
                     if (layers[1]) > 0:
                         layers[1] = layers[1] - i
@@ -337,16 +327,13 @@ class Darknet(nn.Module):
                     map1 = outputs[i + layers[0]]
                     map2 = outputs[i + layers[1]]
                     
-                    
                     x = torch.cat((map1, map2), 1)
                 outputs[i] = x
             
-            elif  module_type == "shortcut":
+            elif module_type == "shortcut":
                 from_ = int(modules[i]["from"])
                 x = outputs[i-1] + outputs[i+from_]
                 outputs[i] = x
-                
-            
             
             elif module_type == 'yolo':        
                 
@@ -364,7 +351,6 @@ class Darknet(nn.Module):
                 if type(x) == int:
                     continue
 
-                
                 if not write:
                     detections = x
                     write = 1
@@ -374,8 +360,6 @@ class Darknet(nn.Module):
                 
                 outputs[i] = outputs[i-1]
                 
-        
-        
         try:
             return detections
         except:
@@ -515,9 +499,6 @@ class Darknet(nn.Module):
                 
                 #Let us save the weights for the Convolutional layers
                 cpu(conv.weight.data).numpy().tofile(fp)
-               
-
-
 
 
 #
